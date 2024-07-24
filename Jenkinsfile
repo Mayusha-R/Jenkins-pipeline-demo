@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    withEnv(["PATH+MAVEN=${MAVEN_HOME}\\bin"]) {
+                    withEnv(["PATH+MAVEN=${MAVEN_HOME}//bin"]) {
                         sh 'mvn clean install'
                     }
                 }
@@ -25,7 +25,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    withEnv(["PATH+MAVEN=${MAVEN_HOME}\\bin"]) {
+                    withEnv(["PATH+MAVEN=${MAVEN_HOME}//bin"]) {
                         sh 'mvn test'
                     }
                 }
