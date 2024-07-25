@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Mayusha-R/Jenkins-pipeline-demo.git', branch: 'main'
+                git url: 'https://github.com/Mayusha-R/Jenkins-pipeline-demo.git', branch: 'main', credentialsId: 'private-demo-cred'
             }
         }
 
